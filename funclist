@@ -1,0 +1,21 @@
+___ftneg: CODE, 5330 0 38
+_log: CODE, 3646 0 302
+_configure_adc: CODE, 5368 0 32
+_configure_pwm: CODE, 5400 0 18
+___ftpack: CODE, 4636 0 168
+_main: CODE, 2678 0 528
+___lwtoft: CODE, 5286 0 44
+___ftadd: CODE, 3206 0 440
+_eval_poly: CODE, 4426 0 210
+_ADC_RESOLUTION: SMALLCONST, 2049 0 3
+__initialization: CODE, 5418 0 4
+_frexp: CODE, 4804 0 148
+_adc_convert: CODE, 5238 0 48
+_temperature_get: CODE, 2080 0 598
+___ftmul: CODE, 3948 0 248
+log@coeff: SMALLCONST, 2052 0 27
+___awtoft: CODE, 5096 0 84
+___wmul: CODE, 5180 0 58
+___ftge: CODE, 4952 0 144
+___ftdiv: CODE, 4196 0 230
+Total: 3372
