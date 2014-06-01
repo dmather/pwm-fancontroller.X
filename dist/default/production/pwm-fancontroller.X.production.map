@@ -3,17 +3,16 @@ Microchip MPLAB XC8 Compiler V1.31 ()
 Linker command line:
 
 --edf=/opt/microchip/xc8/v1.31/dat/en_msgs.txt -cs \
-  -h+dist/default/production/NTC_Thermistor_text.X.production.sym \
-  --cmf=dist/default/production/NTC_Thermistor_text.X.production.cmf -z \
-  -Q18F45K50 -o/tmp/cgtO4MHSy \
-  -Mdist/default/production/NTC_Thermistor_text.X.production.map -E1 \
-  -ver=XC8 -ASTACK=078h-07ffh -pstack=STACK -ACODE=00h-07FFFh \
-  -ACONST=00h-07FFFh -ASMALLCONST=0800h-08FFhx120 \
-  -AMEDIUMCONST=0800h-07FFFh -ACOMRAM=01h-05Fh -AABS1=00h-07FFh \
-  -ABIGRAM=01h-07FFh -ARAM=060h-0FFh,0100h-01FFhx7 -ABANK0=060h-0FFh \
-  -ABANK1=0100h-01FFh -ABANK2=0200h-02FFh -ABANK3=0300h-03FFh \
-  -ABANK4=0400h-04FFh -ABANK5=0500h-05FFh -ABANK6=0600h-06FFh \
-  -ABANK7=0700h-07FFh -ASFR=0F53h-0F5Fh,0F60h-0FFFh \
+  -h+dist/default/production/pwm-fancontroller.X.production.sym \
+  --cmf=dist/default/production/pwm-fancontroller.X.production.cmf -z \
+  -Q18F45K50 -o/tmp/cgtvb3j9z \
+  -Mdist/default/production/pwm-fancontroller.X.production.map -E1 -ver=XC8 \
+  -ASTACK=078h-07ffh -pstack=STACK -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
+  -ASMALLCONST=0800h-08FFhx120 -AMEDIUMCONST=0800h-07FFFh -ACOMRAM=01h-05Fh \
+  -AABS1=00h-07FFh -ABIGRAM=01h-07FFh -ARAM=060h-0FFh,0100h-01FFhx7 \
+  -ABANK0=060h-0FFh -ABANK1=0100h-01FFh -ABANK2=0200h-02FFh \
+  -ABANK3=0300h-03FFh -ABANK4=0400h-04FFh -ABANK5=0500h-05FFh \
+  -ABANK6=0600h-06FFh -ABANK7=0700h-07FFh -ASFR=0F53h-0F5Fh,0F60h-0FFFh \
   -preset_vec=00h,intcode,intcodelo,powerup,init,end_init -pramtop=0800h \
   -psmallconst=SMALLCONST -pmediumconst=MEDIUMCONST -pconst=CONST \
   -AFARRAM=00h-00h -ACONFIG=0300000h-030000Dh -pconfig=CONFIG \
@@ -22,8 +21,8 @@ Linker command line:
   -prdata=COMRAM,nvrram=COMRAM,nvbit=COMRAM,rbss=COMRAM,rbit=COMRAM \
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
-  -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE /tmp/cgt5yqjUx.obj \
-  dist/default/production/NTC_Thermistor_text.X.production.obj 
+  -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE /tmp/cgtmFA837.obj \
+  dist/default/production/pwm-fancontroller.X.production.obj 
 
 Object code version is 3.11
 
@@ -35,11 +34,11 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/cgt5yqjUx.obj
+/tmp/cgtmFA837.obj
                 end_init                              0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
                 config                           300000   300000        E   300000       0
-dist/default/production/NTC_Thermistor_text.X.production.obj
+dist/default/production/pwm-fancontroller.X.production.obj
                 smallconst                          800      800       20      400       0
                 text16                             1358     1358       90      410       0
                 text15                             14F8     14F8       20      410       0
@@ -508,7 +507,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 45 in file "ntc_test.c"
+		line 53 in file "ntc_test.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -972,7 +971,7 @@ Total ram usage:        8 bytes
 
  *************** function _configure_pwm *****************
  Defined at:
-		line 35 in file "ntc_test.c"
+		line 43 in file "ntc_test.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1001,7 +1000,7 @@ Total ram usage:        0 bytes
 
  *************** function _configure_adc *****************
  Defined at:
-		line 17 in file "ntc_test.c"
+		line 25 in file "ntc_test.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type

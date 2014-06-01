@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.31 build 56723 
-                                                                                               Sun Jun  1 05:38:31 2014
+                                                                                               Sun Jun  1 06:21:14 2014
 
 Microchip Technology Omniscient Code Generator (Lite mode) build 56723
      1                           	processor	18F45K50
@@ -413,7 +413,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 56723
    407 ;;
    408 ;; *************** function _main *****************
    409 ;; Defined at:
-   410 ;;		line 45 in file "ntc_test.c"
+   410 ;;		line 53 in file "ntc_test.c"
    411 ;; Parameters:    Size  Location     Type
    412 ;;		None
    413 ;; Auto vars:     Size  Location     Type
@@ -449,7 +449,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 56723
    443  000A76                     _main:
    444                           	opt stack 26
    445                           
-   446                           ;ntc_test.c: 47: float temp = 0;
+   446                           ;ntc_test.c: 55: float temp = 0;
    447                           
    448                           ;incstack = 0
    449  000A76  0E00               	movlw	0
@@ -459,18 +459,18 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 56723
    453  000A7E  0E00               	movlw	0
    454  000A80  6E51               	movwf	main@temp+2,c
    455                           
-   456                           ;ntc_test.c: 50: TRISCbits.RC2 = 0;
+   456                           ;ntc_test.c: 58: TRISCbits.RC2 = 0;
    457  000A82  9494               	bcf	3988,2,c	;volatile
    458                           
-   459                           ;ntc_test.c: 51: configure_adc();
+   459                           ;ntc_test.c: 59: configure_adc();
    460  000A84  EC7C  F00A         	call	_configure_adc	;wreg free
    461                           
-   462                           ;ntc_test.c: 52: configure_pwm();
+   462                           ;ntc_test.c: 60: configure_pwm();
    463  000A88  EC8C  F00A         	call	_configure_pwm	;wreg free
    464  000A8C                     l2239:
    465                           
-   466                           ;ntc_test.c: 54: {
-   467                           ;ntc_test.c: 56: temp = temperature_get(0);
+   466                           ;ntc_test.c: 62: {
+   467                           ;ntc_test.c: 64: temp = temperature_get(0);
    468  000A8C  0E00               	movlw	0
    469  000A8E  6E4D               	movwf	temperature_get@sensor+1,c
    470  000A90  0E00               	movlw	0
@@ -480,7 +480,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 56723
    474  000A9C  C04D  F050         	movff	?_temperature_get+1,main@temp+1
    475  000AA0  C04E  F051         	movff	?_temperature_get+2,main@temp+2
    476                           
-   477                           ;ntc_test.c: 57: if(temp >= 20 && temp <= 22)
+   477                           ;ntc_test.c: 65: if(temp >= 20 && temp <= 22)
    478  000AA4  C04F  F001         	movff	main@temp,___ftge@ff1
    479  000AA8  C050  F002         	movff	main@temp+1,___ftge@ff1+1
    480  000AAC  C051  F003         	movff	main@temp+2,___ftge@ff1+2
@@ -506,12 +506,12 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 56723
    500  000AE0  A0D8               	btfss	status,0,c
    501  000AE2  D002               	goto	l2247
    502                           
-   503                           ;ntc_test.c: 58: CCPR1L = 0;
+   503                           ;ntc_test.c: 66: CCPR1L = 0;
    504  000AE4  0E00               	movlw	0
    505  000AE6  D0CD               	goto	L7
    506  000AE8                     l2247:
    507                           
-   508                           ;ntc_test.c: 59: else if(temp >= 22 && temp <= 24)
+   508                           ;ntc_test.c: 67: else if(temp >= 22 && temp <= 24)
    509  000AE8  C04F  F001         	movff	main@temp,___ftge@ff1
    510  000AEC  C050  F002         	movff	main@temp+1,___ftge@ff1+1
    511  000AF0  C051  F003         	movff	main@temp+2,___ftge@ff1+2
@@ -537,12 +537,12 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 56723
    531  000B24  A0D8               	btfss	status,0,c
    532  000B26  D002               	goto	l2253
    533                           
-   534                           ;ntc_test.c: 60: CCPR1L = 25;
+   534                           ;ntc_test.c: 68: CCPR1L = 25;
    535  000B28  0E19               	movlw	25
    536  000B2A  D0AB               	goto	L7
    537  000B2C                     l2253:
    538                           
-   539                           ;ntc_test.c: 61: else if(temp >= 24 && temp <= 26)
+   539                           ;ntc_test.c: 69: else if(temp >= 24 && temp <= 26)
    540  000B2C  C04F  F001         	movff	main@temp,___ftge@ff1
    541  000B30  C050  F002         	movff	main@temp+1,___ftge@ff1+1
    542  000B34  C051  F003         	movff	main@temp+2,___ftge@ff1+2
@@ -568,12 +568,12 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 56723
    562  000B68  A0D8               	btfss	status,0,c
    563  000B6A  D002               	goto	l2259
    564                           
-   565                           ;ntc_test.c: 62: CCPR1L = 50;
+   565                           ;ntc_test.c: 70: CCPR1L = 50;
    566  000B6C  0E32               	movlw	50
    567  000B6E  D089               	goto	L7
    568  000B70                     l2259:
    569                           
-   570                           ;ntc_test.c: 63: else if(temp >= 26 && temp <= 28)
+   570                           ;ntc_test.c: 71: else if(temp >= 26 && temp <= 28)
    571  000B70  C04F  F001         	movff	main@temp,___ftge@ff1
    572  000B74  C050  F002         	movff	main@temp+1,___ftge@ff1+1
    573  000B78  C051  F003         	movff	main@temp+2,___ftge@ff1+2
@@ -599,12 +599,12 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 56723
    593  000BAC  A0D8               	btfss	status,0,c
    594  000BAE  D002               	goto	l2265
    595                           
-   596                           ;ntc_test.c: 64: CCPR1L = 100;
+   596                           ;ntc_test.c: 72: CCPR1L = 100;
    597  000BB0  0E64               	movlw	100
    598  000BB2  D067               	goto	L7
    599  000BB4                     l2265:
    600                           
-   601                           ;ntc_test.c: 65: else if(temp >= 28 && temp <= 30)
+   601                           ;ntc_test.c: 73: else if(temp >= 28 && temp <= 30)
    602  000BB4  C04F  F001         	movff	main@temp,___ftge@ff1
    603  000BB8  C050  F002         	movff	main@temp+1,___ftge@ff1+1
    604  000BBC  C051  F003         	movff	main@temp+2,___ftge@ff1+2
@@ -630,12 +630,12 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 56723
    624  000BF0  A0D8               	btfss	status,0,c
    625  000BF2  D002               	goto	l2271
    626                           
-   627                           ;ntc_test.c: 66: CCPR1L = 150;
+   627                           ;ntc_test.c: 74: CCPR1L = 150;
    628  000BF4  0E96               	movlw	150
    629  000BF6  D045               	goto	L7
    630  000BF8                     l2271:
    631                           
-   632                           ;ntc_test.c: 67: else if(temp >= 30 && temp <= 32)
+   632                           ;ntc_test.c: 75: else if(temp >= 30 && temp <= 32)
    633  000BF8  C04F  F001         	movff	main@temp,___ftge@ff1
    634  000BFC  C050  F002         	movff	main@temp+1,___ftge@ff1+1
    635  000C00  C051  F003         	movff	main@temp+2,___ftge@ff1+2
@@ -661,12 +661,12 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 56723
    655  000C34  A0D8               	btfss	status,0,c
    656  000C36  D002               	goto	l2277
    657                           
-   658                           ;ntc_test.c: 68: CCPR1L = 200;
+   658                           ;ntc_test.c: 76: CCPR1L = 200;
    659  000C38  0EC8               	movlw	200
    660  000C3A  D023               	goto	L7
    661  000C3C                     l2277:
    662                           
-   663                           ;ntc_test.c: 69: else if(temp >= 32 && temp <= 34)
+   663                           ;ntc_test.c: 77: else if(temp >= 32 && temp <= 34)
    664  000C3C  C04F  F001         	movff	main@temp,___ftge@ff1
    665  000C40  C050  F002         	movff	main@temp+1,___ftge@ff1+1
    666  000C44  C051  F003         	movff	main@temp+2,___ftge@ff1+2
@@ -692,13 +692,13 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 56723
    686  000C78  A0D8               	btfss	status,0,c
    687  000C7A  D002               	goto	l2283
    688                           
-   689                           ;ntc_test.c: 70: CCPR1L = 225;
+   689                           ;ntc_test.c: 78: CCPR1L = 225;
    690  000C7C  0EE1               	movlw	225
    691  000C7E  D001               	goto	L7
    692  000C80                     l2283:
    693                           
-   694                           ;ntc_test.c: 71: else
-   695                           ;ntc_test.c: 72: CCPR1L = 249;
+   694                           ;ntc_test.c: 79: else
+   695                           ;ntc_test.c: 80: CCPR1L = 249;
    696  000C80  0EF9               	movlw	249
    697  000C82                     L7:
    698  000C82  6EBE               	movwf	4030,c	;volatile
@@ -2507,7 +2507,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 56723
   2501                           
   2502 ;; *************** function _configure_pwm *****************
   2503 ;; Defined at:
-  2504 ;;		line 35 in file "ntc_test.c"
+  2504 ;;		line 43 in file "ntc_test.c"
   2505 ;; Parameters:    Size  Location     Type
   2506 ;;		None
   2507 ;; Auto vars:     Size  Location     Type
@@ -2540,21 +2540,21 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 56723
   2534  001518                     _configure_pwm:
   2535                           	opt stack 30
   2536                           
-  2537                           ;ntc_test.c: 37: CCP1CON = 0b00001100;
+  2537                           ;ntc_test.c: 45: CCP1CON = 0b00001100;
   2538                           
   2539                           ;incstack = 0
   2540  001518  0E0C               	movlw	12
   2541  00151A  6EBD               	movwf	4029,c	;volatile
   2542                           
-  2543                           ;ntc_test.c: 40: T2CON = 0b00000111;
+  2543                           ;ntc_test.c: 48: T2CON = 0b00000111;
   2544  00151C  0E07               	movlw	7
   2545  00151E  6EBA               	movwf	4026,c	;volatile
   2546                           
-  2547                           ;ntc_test.c: 41: PR2 = 249;
+  2547                           ;ntc_test.c: 49: PR2 = 249;
   2548  001520  0EF9               	movlw	249
   2549  001522  6EBB               	movwf	4027,c	;volatile
   2550                           
-  2551                           ;ntc_test.c: 42: CCPR1L = 25;
+  2551                           ;ntc_test.c: 50: CCPR1L = 25;
   2552  001524  0E19               	movlw	25
   2553  001526  6EBE               	movwf	4030,c	;volatile
   2554  001528  0012               	return	
@@ -2574,7 +2574,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 56723
   2568                           
   2569 ;; *************** function _configure_adc *****************
   2570 ;; Defined at:
-  2571 ;;		line 17 in file "ntc_test.c"
+  2571 ;;		line 25 in file "ntc_test.c"
   2572 ;; Parameters:    Size  Location     Type
   2573 ;;		None
   2574 ;; Auto vars:     Size  Location     Type
@@ -2607,41 +2607,41 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 56723
   2601  0014F8                     _configure_adc:
   2602                           	opt stack 30
   2603                           
-  2604                           ;ntc_test.c: 20: TRISAbits.RA0 = 1;
+  2604                           ;ntc_test.c: 28: TRISAbits.RA0 = 1;
   2605                           
   2606                           ;incstack = 0
   2607  0014F8  8092               	bsf	3986,0,c	;volatile
   2608                           
-  2609                           ;ntc_test.c: 22: ANSELAbits.ANSA0 = 1;
+  2609                           ;ntc_test.c: 30: ANSELAbits.ANSA0 = 1;
   2610  0014FA  010F               	movlb	15	; () banked
   2611  0014FC  010F               	movlb	15	; () banked
   2612  0014FE  815B               	bsf	91,0,b	;volatile
   2613                           
-  2614                           ;ntc_test.c: 24: ADCON2bits.ADFM = 1;
+  2614                           ;ntc_test.c: 32: ADCON2bits.ADFM = 1;
   2615  001500  8EC0               	bsf	4032,7,c	;volatile
   2616                           
-  2617                           ;ntc_test.c: 25: ADCON2bits.ACQT = 0b111;
+  2617                           ;ntc_test.c: 33: ADCON2bits.ACQT = 0b111;
   2618  001502  86C0               	bsf	4032,3,c	;volatile
   2619  001504  88C0               	bsf	4032,4,c	;volatile
   2620  001506  8AC0               	bsf	4032,5,c	;volatile
   2621                           
   2622                           ; BSR set to: 15
-  2623                           ;ntc_test.c: 26: ADCON2bits.ADCS = 0b101;
+  2623                           ;ntc_test.c: 34: ADCON2bits.ADCS = 0b101;
   2624  001508  50C0               	movf	4032,w,c	;volatile
   2625  00150A  0BF8               	andlw	-8
   2626  00150C  0905               	iorlw	5
   2627  00150E  6EC0               	movwf	4032,c	;volatile
   2628                           
   2629                           ; BSR set to: 15
-  2630                           ;ntc_test.c: 28: ADCON1bits.PVCFG0 = 0;
+  2630                           ;ntc_test.c: 36: ADCON1bits.PVCFG0 = 0;
   2631  001510  94C1               	bcf	4033,2,c	;volatile
   2632                           
   2633                           ; BSR set to: 15
-  2634                           ;ntc_test.c: 30: ADCON1bits.NVCFG1 = 0;
+  2634                           ;ntc_test.c: 38: ADCON1bits.NVCFG1 = 0;
   2635  001512  92C1               	bcf	4033,1,c	;volatile
   2636                           
   2637                           ; BSR set to: 15
-  2638                           ;ntc_test.c: 32: ADCON0bits.ADON = 1;
+  2638                           ;ntc_test.c: 40: ADCON0bits.ADON = 1;
   2639  001514  80C2               	bsf	4034,0,c	;volatile
   2640                           
   2641                           ; BSR set to: 15
@@ -3301,7 +3301,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.31 build 56723 
-Symbol Table                                                                                   Sun Jun  1 05:38:31 2014
+Symbol Table                                                                                   Sun Jun  1 06:21:14 2014
 
                       l31 148A            ?_configure_adc 0001       ___wmul@multiplicand 0003  
           ?_configure_pwm 0001              ___ftadd@exp1 001C              ___ftadd@exp2 001B  

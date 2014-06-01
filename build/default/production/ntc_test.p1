@@ -6884,168 +6884,168 @@ Version 3.2 HI-TECH Software Intermediate Code
 "47
 [e :UE 943 ]
 }
-"5 ntc_test.c
+"13 ntc_test.c
 [p x CPUDIV=NOCLKDIV ]
-"6
+"14
 [p x FOSC=INTOSCIO ]
-"7
+"15
 [p x WDTEN=OFF ]
-"8
+"16
 [p x MCLRE=ON ]
-"9
-[p x PBADEN=OFF ]
-[; ;ntc_test.c: 13: void configure_adc(void);
-[; ;ntc_test.c: 14: void configure_pwm(void);
 "17
+[p x PBADEN=OFF ]
+[; ;ntc_test.c: 21: void configure_adc(void);
+[; ;ntc_test.c: 22: void configure_pwm(void);
+"25
 [v _configure_adc `(v ~T0 @X0 1 ef ]
-"18
+"26
 {
-[; ;ntc_test.c: 17: void configure_adc(void)
-[; ;ntc_test.c: 18: {
+[; ;ntc_test.c: 25: void configure_adc(void)
+[; ;ntc_test.c: 26: {
 [e :U _configure_adc ]
 [f ]
-[; ;ntc_test.c: 20: TRISAbits.RA0 = 1;
-"20
-[e = . . _TRISAbits 1 0 -> -> 1 `i `uc ]
-[; ;ntc_test.c: 22: ANSELAbits.ANSA0 = 1;
-"22
-[e = . . _ANSELAbits 0 0 -> -> 1 `i `uc ]
-[; ;ntc_test.c: 24: ADCON2bits.ADFM = 1;
-"24
-[e = . . _ADCON2bits 0 3 -> -> 1 `i `uc ]
-[; ;ntc_test.c: 25: ADCON2bits.ACQT = 0b111;
-"25
-[e = . . _ADCON2bits 0 1 -> -> 7 `i `uc ]
-[; ;ntc_test.c: 26: ADCON2bits.ADCS = 0b101;
-"26
-[e = . . _ADCON2bits 0 0 -> -> 5 `i `uc ]
-[; ;ntc_test.c: 28: ADCON1bits.PVCFG0 = 0;
+[; ;ntc_test.c: 28: TRISAbits.RA0 = 1;
 "28
-[e = . . _ADCON1bits 1 2 -> -> 0 `i `uc ]
-[; ;ntc_test.c: 30: ADCON1bits.NVCFG1 = 0;
+[e = . . _TRISAbits 1 0 -> -> 1 `i `uc ]
+[; ;ntc_test.c: 30: ANSELAbits.ANSA0 = 1;
 "30
-[e = . . _ADCON1bits 1 1 -> -> 0 `i `uc ]
-[; ;ntc_test.c: 32: ADCON0bits.ADON = 1;
+[e = . . _ANSELAbits 0 0 -> -> 1 `i `uc ]
+[; ;ntc_test.c: 32: ADCON2bits.ADFM = 1;
 "32
-[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-[; ;ntc_test.c: 33: }
+[e = . . _ADCON2bits 0 3 -> -> 1 `i `uc ]
+[; ;ntc_test.c: 33: ADCON2bits.ACQT = 0b111;
 "33
+[e = . . _ADCON2bits 0 1 -> -> 7 `i `uc ]
+[; ;ntc_test.c: 34: ADCON2bits.ADCS = 0b101;
+"34
+[e = . . _ADCON2bits 0 0 -> -> 5 `i `uc ]
+[; ;ntc_test.c: 36: ADCON1bits.PVCFG0 = 0;
+"36
+[e = . . _ADCON1bits 1 2 -> -> 0 `i `uc ]
+[; ;ntc_test.c: 38: ADCON1bits.NVCFG1 = 0;
+"38
+[e = . . _ADCON1bits 1 1 -> -> 0 `i `uc ]
+[; ;ntc_test.c: 40: ADCON0bits.ADON = 1;
+"40
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+[; ;ntc_test.c: 41: }
+"41
 [e :UE 944 ]
 }
-"35
+"43
 [v _configure_pwm `(v ~T0 @X0 1 ef ]
-"36
+"44
 {
-[; ;ntc_test.c: 35: void configure_pwm(void)
-[; ;ntc_test.c: 36: {
+[; ;ntc_test.c: 43: void configure_pwm(void)
+[; ;ntc_test.c: 44: {
 [e :U _configure_pwm ]
 [f ]
-[; ;ntc_test.c: 37: CCP1CON = 0b00001100;
-"37
+[; ;ntc_test.c: 45: CCP1CON = 0b00001100;
+"45
 [e = _CCP1CON -> -> 12 `i `uc ]
-[; ;ntc_test.c: 40: T2CON = 0b00000111;
-"40
+[; ;ntc_test.c: 48: T2CON = 0b00000111;
+"48
 [e = _T2CON -> -> 7 `i `uc ]
-[; ;ntc_test.c: 41: PR2 = 249;
-"41
+[; ;ntc_test.c: 49: PR2 = 249;
+"49
 [e = _PR2 -> -> 249 `i `uc ]
-[; ;ntc_test.c: 42: CCPR1L = 25;
-"42
+[; ;ntc_test.c: 50: CCPR1L = 25;
+"50
 [e = _CCPR1L -> -> 25 `i `uc ]
-[; ;ntc_test.c: 43: }
-"43
+[; ;ntc_test.c: 51: }
+"51
 [e :UE 945 ]
 }
-"45
-[v _main `(v ~T0 @X0 1 ef ]
-"46
-{
-[; ;ntc_test.c: 45: void main(void)
-[; ;ntc_test.c: 46: {
-[e :U _main ]
-[f ]
-"47
-[v _temp `f ~T0 @X0 1 a ]
-[; ;ntc_test.c: 47: float temp = 0;
-[e = _temp -> -> 0 `i `f ]
-[; ;ntc_test.c: 50: TRISCbits.RC2 = 0;
-"50
-[e = . . _TRISCbits 1 2 -> -> 0 `i `uc ]
-[; ;ntc_test.c: 51: configure_adc();
-"51
-[e ( _configure_adc ..  ]
-[; ;ntc_test.c: 52: configure_pwm();
-"52
-[e ( _configure_pwm ..  ]
-[; ;ntc_test.c: 53: while(1)
 "53
-[e :U 948 ]
-[; ;ntc_test.c: 54: {
+[v _main `(v ~T0 @X0 1 ef ]
 "54
 {
-[; ;ntc_test.c: 56: temp = temperature_get(0);
-"56
-[e = _temp ( _temperature_get (1 -> 0 `i ]
-[; ;ntc_test.c: 57: if(temp >= 20 && temp <= 22)
-"57
-[e $ ! && >= _temp -> -> 20 `i `f <= _temp -> -> 22 `i `f 950  ]
-[; ;ntc_test.c: 58: CCPR1L = 0;
+[; ;ntc_test.c: 53: void main(void)
+[; ;ntc_test.c: 54: {
+[e :U _main ]
+[f ]
+"55
+[v _temp `f ~T0 @X0 1 a ]
+[; ;ntc_test.c: 55: float temp = 0;
+[e = _temp -> -> 0 `i `f ]
+[; ;ntc_test.c: 58: TRISCbits.RC2 = 0;
 "58
+[e = . . _TRISCbits 1 2 -> -> 0 `i `uc ]
+[; ;ntc_test.c: 59: configure_adc();
+"59
+[e ( _configure_adc ..  ]
+[; ;ntc_test.c: 60: configure_pwm();
+"60
+[e ( _configure_pwm ..  ]
+[; ;ntc_test.c: 61: while(1)
+"61
+[e :U 948 ]
+[; ;ntc_test.c: 62: {
+"62
+{
+[; ;ntc_test.c: 64: temp = temperature_get(0);
+"64
+[e = _temp ( _temperature_get (1 -> 0 `i ]
+[; ;ntc_test.c: 65: if(temp >= 20 && temp <= 22)
+"65
+[e $ ! && >= _temp -> -> 20 `i `f <= _temp -> -> 22 `i `f 950  ]
+[; ;ntc_test.c: 66: CCPR1L = 0;
+"66
 [e = _CCPR1L -> -> 0 `i `uc ]
 [e $U 951  ]
-"59
+"67
 [e :U 950 ]
-[; ;ntc_test.c: 59: else if(temp >= 22 && temp <= 24)
+[; ;ntc_test.c: 67: else if(temp >= 22 && temp <= 24)
 [e $ ! && >= _temp -> -> 22 `i `f <= _temp -> -> 24 `i `f 952  ]
-[; ;ntc_test.c: 60: CCPR1L = 25;
-"60
+[; ;ntc_test.c: 68: CCPR1L = 25;
+"68
 [e = _CCPR1L -> -> 25 `i `uc ]
 [e $U 953  ]
-"61
+"69
 [e :U 952 ]
-[; ;ntc_test.c: 61: else if(temp >= 24 && temp <= 26)
+[; ;ntc_test.c: 69: else if(temp >= 24 && temp <= 26)
 [e $ ! && >= _temp -> -> 24 `i `f <= _temp -> -> 26 `i `f 954  ]
-[; ;ntc_test.c: 62: CCPR1L = 50;
-"62
+[; ;ntc_test.c: 70: CCPR1L = 50;
+"70
 [e = _CCPR1L -> -> 50 `i `uc ]
 [e $U 955  ]
-"63
+"71
 [e :U 954 ]
-[; ;ntc_test.c: 63: else if(temp >= 26 && temp <= 28)
+[; ;ntc_test.c: 71: else if(temp >= 26 && temp <= 28)
 [e $ ! && >= _temp -> -> 26 `i `f <= _temp -> -> 28 `i `f 956  ]
-[; ;ntc_test.c: 64: CCPR1L = 100;
-"64
+[; ;ntc_test.c: 72: CCPR1L = 100;
+"72
 [e = _CCPR1L -> -> 100 `i `uc ]
 [e $U 957  ]
-"65
+"73
 [e :U 956 ]
-[; ;ntc_test.c: 65: else if(temp >= 28 && temp <= 30)
+[; ;ntc_test.c: 73: else if(temp >= 28 && temp <= 30)
 [e $ ! && >= _temp -> -> 28 `i `f <= _temp -> -> 30 `i `f 958  ]
-[; ;ntc_test.c: 66: CCPR1L = 150;
-"66
+[; ;ntc_test.c: 74: CCPR1L = 150;
+"74
 [e = _CCPR1L -> -> 150 `i `uc ]
 [e $U 959  ]
-"67
+"75
 [e :U 958 ]
-[; ;ntc_test.c: 67: else if(temp >= 30 && temp <= 32)
+[; ;ntc_test.c: 75: else if(temp >= 30 && temp <= 32)
 [e $ ! && >= _temp -> -> 30 `i `f <= _temp -> -> 32 `i `f 960  ]
-[; ;ntc_test.c: 68: CCPR1L = 200;
-"68
+[; ;ntc_test.c: 76: CCPR1L = 200;
+"76
 [e = _CCPR1L -> -> 200 `i `uc ]
 [e $U 961  ]
-"69
+"77
 [e :U 960 ]
-[; ;ntc_test.c: 69: else if(temp >= 32 && temp <= 34)
+[; ;ntc_test.c: 77: else if(temp >= 32 && temp <= 34)
 [e $ ! && >= _temp -> -> 32 `i `f <= _temp -> -> 34 `i `f 962  ]
-[; ;ntc_test.c: 70: CCPR1L = 225;
-"70
+[; ;ntc_test.c: 78: CCPR1L = 225;
+"78
 [e = _CCPR1L -> -> 225 `i `uc ]
 [e $U 963  ]
-"71
+"79
 [e :U 962 ]
-[; ;ntc_test.c: 71: else
-[; ;ntc_test.c: 72: CCPR1L = 249;
-"72
+[; ;ntc_test.c: 79: else
+[; ;ntc_test.c: 80: CCPR1L = 249;
+"80
 [e = _CCPR1L -> -> 249 `i `uc ]
 [e :U 963 ]
 [e :U 961 ]
@@ -7054,14 +7054,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 955 ]
 [e :U 953 ]
 [e :U 951 ]
-"73
+"81
 }
 [e :U 947 ]
-"53
+"61
 [e $U 948  ]
 [e :U 949 ]
-[; ;ntc_test.c: 73: }
-[; ;ntc_test.c: 74: }
-"74
+[; ;ntc_test.c: 81: }
+[; ;ntc_test.c: 82: }
+"82
 [e :UE 946 ]
 }

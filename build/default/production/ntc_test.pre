@@ -8651,7 +8651,7 @@ return temp;
 }
 
 
-# 5 "ntc_test.c"
+# 13 "ntc_test.c"
 #pragma config CPUDIV = NOCLKDIV
 #pragma config FOSC = INTOSCIO
 #pragma config WDTEN = OFF

@@ -135,15 +135,15 @@
 [v ___asftsub __asftsub `(f  1 e 3 0 ]
 "4 /opt/microchip/xc8/v1.31/sources/pic18/aslmul.c
 [v ___aslmul __aslmul `(ul  1 e 4 0 ]
-"12 /home/daniel/MPLABXProjects/NTC_Thermistor_text.X/ntc_temperature.h
+"12 /home/daniel/MPLABXProjects/pwm-fancontroller.X/ntc_temperature.h
 [v _adc_convert adc_convert `(ui  1 e 2 0 ]
 "25
 [v _temperature_get temperature_get `(f  1 e 3 0 ]
-"17 /home/daniel/MPLABXProjects/NTC_Thermistor_text.X/ntc_test.c
+"25 /home/daniel/MPLABXProjects/pwm-fancontroller.X/ntc_test.c
 [v _configure_adc configure_adc `(v  1 e 0 0 ]
-"35
+"43
 [v _configure_pwm configure_pwm `(v  1 e 0 0 ]
-"45
+"53
 [v _main main `(v  1 e 0 0 ]
 [s S119 . 1 `uc 1 ANSA0 1 0 :1:0 
 `uc 1 ANSA1 1 0 :1:1 
@@ -267,16 +267,16 @@
 [v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
 "3 /opt/microchip/xc8/v1.31/sources/common/errno.c
 [v _errno errno `i  1 e 2 0 ]
-"9 /home/daniel/MPLABXProjects/NTC_Thermistor_text.X/ntc_temperature.h
+"9 /home/daniel/MPLABXProjects/pwm-fancontroller.X/ntc_temperature.h
 [v _ADC_RESOLUTION ADC_RESOLUTION `Cf  1 e 3 0 ]
-"45 /home/daniel/MPLABXProjects/NTC_Thermistor_text.X/ntc_test.c
+"53 /home/daniel/MPLABXProjects/pwm-fancontroller.X/ntc_test.c
 [v _main main `(v  1 e 0 0 ]
 {
-"47
+"55
 [v main@temp temp `f  1 a 3 78 ]
-"74
+"82
 } 0
-"25 /home/daniel/MPLABXProjects/NTC_Thermistor_text.X/ntc_temperature.h
+"25 /home/daniel/MPLABXProjects/pwm-fancontroller.X/ntc_temperature.h
 [v _temperature_get temperature_get `(f  1 e 3 0 ]
 {
 "35
@@ -371,7 +371,7 @@
 [v ___awtoft@c c `i  1 p 2 8 ]
 "42
 } 0
-"12 /home/daniel/MPLABXProjects/NTC_Thermistor_text.X/ntc_temperature.h
+"12 /home/daniel/MPLABXProjects/pwm-fancontroller.X/ntc_temperature.h
 [v _adc_convert adc_convert `(ui  1 e 2 0 ]
 {
 [v adc_convert@channel channel `i  1 p 2 0 ]
@@ -411,15 +411,15 @@
 [v ___ftpack@sign sign `uc  1 p 1 4 ]
 "86
 } 0
-"35 /home/daniel/MPLABXProjects/NTC_Thermistor_text.X/ntc_test.c
+"43 /home/daniel/MPLABXProjects/pwm-fancontroller.X/ntc_test.c
 [v _configure_pwm configure_pwm `(v  1 e 0 0 ]
 {
-"43
+"51
 } 0
-"17
+"25
 [v _configure_adc configure_adc `(v  1 e 0 0 ]
 {
-"33
+"41
 } 0
 "4 /opt/microchip/xc8/v1.31/sources/common/ftge.c
 [v ___ftge __ftge `(b  1 e 0 0 ]

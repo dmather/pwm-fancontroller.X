@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=NTC_Thermistor_text.X
+PROJECTNAME=pwm-fancontroller.X
 
 # Active Configuration
 DEFAULTCONF=default

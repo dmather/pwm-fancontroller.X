@@ -6,7 +6,7 @@
   200008h - 2FFFFFh
   30000Eh - 30003Fh
   
- dist/default/production/NTC_Thermistor_text.X.production.hex ranges:
+ dist/default/production/pwm-fancontroller.X.production.hex ranges:
   0h - 3h
   800h - 1537h
   200000h - 200007h
@@ -23,7 +23,7 @@
   T = Trailing code
   & = Find & replace opcode
   X = Find & delete opcode
-  1 = dist/default/production/NTC_Thermistor_text.X.production.hex
+  1 = dist/default/production/pwm-fancontroller.X.production.hex
 00000000: 1111------------------------------------------------------------
 00000800: 1111111111111111111111111111111111111111111111111111111111111111
 00000840: 1111111111111111111111111111111111111111111111111111111111111111

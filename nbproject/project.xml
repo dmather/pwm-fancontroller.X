@@ -2,8 +2,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>NTC_Thermistor_text</name>
-            <creation-uuid>95997816-9058-4148-b0d4-bfc5ffdb11ff</creation-uuid>
+            <name>pwm-fancontroller</name>
+            <creation-uuid>7ed41437-cf42-4209-87bb-c9d258da6e4f</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions/>
             <cpp-extensions/>
