@@ -6829,12 +6829,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 939 ]
 }
 "25
-[v _temperature_get `(f ~T0 @X0 1 ef1`i ]
+[v _get_temperature `(f ~T0 @X0 1 ef1`i ]
 "26
 {
-[; ;ntc_temperature.h: 25: float temperature_get(int sensor)
+[; ;ntc_temperature.h: 25: float get_temperature(int sensor)
 [; ;ntc_temperature.h: 26: {
-[e :U _temperature_get ]
+[e :U _get_temperature ]
 "25
 [v _sensor `i ~T0 @X0 1 r1 ]
 "26
@@ -6894,174 +6894,206 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x MCLRE=ON ]
 "17
 [p x PBADEN=OFF ]
-[; ;ntc_test.c: 21: void configure_adc(void);
-[; ;ntc_test.c: 22: void configure_pwm(void);
+"20
+[v _MIN_DUTY_CYCLE `Cui ~T0 @X0 1 e ]
+[i _MIN_DUTY_CYCLE
+-> -> 15 `i `ui
+]
+[; ;ntc_test.c: 20: const unsigned int MIN_DUTY_CYCLE = 15;
+"21
+[v _MAX_DUTY_CYCLE `Cui ~T0 @X0 1 e ]
+[i _MAX_DUTY_CYCLE
+-> -> 255 `i `ui
+]
+[; ;ntc_test.c: 21: const unsigned int MAX_DUTY_CYCLE = 255;
+"24
+[v _MIN_TEMP `Cf ~T0 @X0 1 e ]
+[i _MIN_TEMP
+-> .18.0 `f
+]
+[; ;ntc_test.c: 24: const float MIN_TEMP = 18.0;
 "25
+[v _MAX_TEMP `Cf ~T0 @X0 1 e ]
+[i _MAX_TEMP
+-> .35.0 `f
+]
+[; ;ntc_test.c: 25: const float MAX_TEMP = 35.0;
+[; ;ntc_test.c: 29: void configure_adc(void);
+[; ;ntc_test.c: 30: void configure_pwm(void);
+[; ;ntc_test.c: 31: void set_fan_speed(float temp);
+"34
 [v _configure_adc `(v ~T0 @X0 1 ef ]
-"26
+"35
 {
-[; ;ntc_test.c: 25: void configure_adc(void)
-[; ;ntc_test.c: 26: {
+[; ;ntc_test.c: 34: void configure_adc(void)
+[; ;ntc_test.c: 35: {
 [e :U _configure_adc ]
 [f ]
-[; ;ntc_test.c: 28: TRISAbits.RA0 = 1;
-"28
+[; ;ntc_test.c: 37: TRISAbits.RA0 = 1;
+"37
 [e = . . _TRISAbits 1 0 -> -> 1 `i `uc ]
-[; ;ntc_test.c: 30: ANSELAbits.ANSA0 = 1;
-"30
+[; ;ntc_test.c: 39: ANSELAbits.ANSA0 = 1;
+"39
 [e = . . _ANSELAbits 0 0 -> -> 1 `i `uc ]
-[; ;ntc_test.c: 32: ADCON2bits.ADFM = 1;
-"32
-[e = . . _ADCON2bits 0 3 -> -> 1 `i `uc ]
-[; ;ntc_test.c: 33: ADCON2bits.ACQT = 0b111;
-"33
-[e = . . _ADCON2bits 0 1 -> -> 7 `i `uc ]
-[; ;ntc_test.c: 34: ADCON2bits.ADCS = 0b101;
-"34
-[e = . . _ADCON2bits 0 0 -> -> 5 `i `uc ]
-[; ;ntc_test.c: 36: ADCON1bits.PVCFG0 = 0;
-"36
-[e = . . _ADCON1bits 1 2 -> -> 0 `i `uc ]
-[; ;ntc_test.c: 38: ADCON1bits.NVCFG1 = 0;
-"38
-[e = . . _ADCON1bits 1 1 -> -> 0 `i `uc ]
-[; ;ntc_test.c: 40: ADCON0bits.ADON = 1;
-"40
-[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-[; ;ntc_test.c: 41: }
+[; ;ntc_test.c: 41: ADCON2bits.ADFM = 1;
 "41
+[e = . . _ADCON2bits 0 3 -> -> 1 `i `uc ]
+[; ;ntc_test.c: 42: ADCON2bits.ACQT = 0b111;
+"42
+[e = . . _ADCON2bits 0 1 -> -> 7 `i `uc ]
+[; ;ntc_test.c: 43: ADCON2bits.ADCS = 0b101;
+"43
+[e = . . _ADCON2bits 0 0 -> -> 5 `i `uc ]
+[; ;ntc_test.c: 45: ADCON1bits.PVCFG0 = 0;
+"45
+[e = . . _ADCON1bits 1 2 -> -> 0 `i `uc ]
+[; ;ntc_test.c: 47: ADCON1bits.NVCFG1 = 0;
+"47
+[e = . . _ADCON1bits 1 1 -> -> 0 `i `uc ]
+[; ;ntc_test.c: 49: ADCON0bits.ADON = 1;
+"49
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+[; ;ntc_test.c: 50: }
+"50
 [e :UE 944 ]
 }
-"43
+"52
 [v _configure_pwm `(v ~T0 @X0 1 ef ]
-"44
+"53
 {
-[; ;ntc_test.c: 43: void configure_pwm(void)
-[; ;ntc_test.c: 44: {
+[; ;ntc_test.c: 52: void configure_pwm(void)
+[; ;ntc_test.c: 53: {
 [e :U _configure_pwm ]
 [f ]
-[; ;ntc_test.c: 45: CCP1CON = 0b00001100;
-"45
+[; ;ntc_test.c: 54: CCP1CON = 0b00001100;
+"54
 [e = _CCP1CON -> -> 12 `i `uc ]
-[; ;ntc_test.c: 48: T2CON = 0b00000111;
-"48
+[; ;ntc_test.c: 57: T2CON = 0b00000111;
+"57
 [e = _T2CON -> -> 7 `i `uc ]
-[; ;ntc_test.c: 49: PR2 = 249;
-"49
+[; ;ntc_test.c: 58: PR2 = 249;
+"58
 [e = _PR2 -> -> 249 `i `uc ]
-[; ;ntc_test.c: 50: CCPR1L = 25;
-"50
+[; ;ntc_test.c: 59: CCPR1L = 25;
+"59
 [e = _CCPR1L -> -> 25 `i `uc ]
-[; ;ntc_test.c: 51: }
-"51
+[; ;ntc_test.c: 60: }
+"60
 [e :UE 945 ]
 }
-"53
-[v _main `(v ~T0 @X0 1 ef ]
-"54
+"62
+[v _set_fan_speed `(v ~T0 @X0 1 ef1`f ]
+"63
 {
-[; ;ntc_test.c: 53: void main(void)
-[; ;ntc_test.c: 54: {
+[; ;ntc_test.c: 62: void set_fan_speed(float temp)
+[; ;ntc_test.c: 63: {
+[e :U _set_fan_speed ]
+"62
+[v _temp `f ~T0 @X0 1 r1 ]
+"63
+[f ]
+"64
+[v _tTemp `f ~T0 @X0 1 a ]
+[; ;ntc_test.c: 64: float tTemp = 0;
+[e = _tTemp -> -> 0 `i `f ]
+[; ;ntc_test.c: 65: if(temp <= MIN_TEMP)
+"65
+[e $ ! <= _temp _MIN_TEMP 947  ]
+[; ;ntc_test.c: 66: {
+"66
+{
+[; ;ntc_test.c: 67: CCPR1L = MIN_DUTY_CYCLE;
+"67
+[e = _CCPR1L -> _MIN_DUTY_CYCLE `uc ]
+"68
+}
+[; ;ntc_test.c: 68: }
+[e $U 948  ]
+"69
+[e :U 947 ]
+[; ;ntc_test.c: 69: else
+[; ;ntc_test.c: 70: {
+"70
+{
+[v _tTemp `f ~T0 @X0 1 a ]
+[; ;ntc_test.c: 71: float tTemp = temp / MAX_TEMP;
+"71
+[e = _tTemp / _temp _MAX_TEMP ]
+[; ;ntc_test.c: 72: if(tTemp >= 1)
+"72
+[e $ ! >= _tTemp -> -> 1 `i `f 949  ]
+[; ;ntc_test.c: 73: {
+"73
+{
+[; ;ntc_test.c: 74: CCPR1L = MAX_DUTY_CYCLE;
+"74
+[e = _CCPR1L -> _MAX_DUTY_CYCLE `uc ]
+"75
+}
+[; ;ntc_test.c: 75: }
+[e $U 950  ]
+"76
+[e :U 949 ]
+[; ;ntc_test.c: 76: else
+[; ;ntc_test.c: 77: {
+"77
+{
+[; ;ntc_test.c: 78: CCPR1L = (int)MAX_DUTY_CYCLE*tTemp;
+"78
+[e = _CCPR1L -> * -> -> _MAX_DUTY_CYCLE `i `f _tTemp `uc ]
+"79
+}
+[e :U 950 ]
+"80
+}
+[e :U 948 ]
+[; ;ntc_test.c: 79: }
+[; ;ntc_test.c: 80: }
+[; ;ntc_test.c: 81: }
+"81
+[e :UE 946 ]
+}
+"83
+[v _main `(v ~T0 @X0 1 ef ]
+"84
+{
+[; ;ntc_test.c: 83: void main(void)
+[; ;ntc_test.c: 84: {
 [e :U _main ]
 [f ]
-"55
+"85
 [v _temp `f ~T0 @X0 1 a ]
-[; ;ntc_test.c: 55: float temp = 0;
+[; ;ntc_test.c: 85: float temp = 0;
 [e = _temp -> -> 0 `i `f ]
-[; ;ntc_test.c: 58: TRISCbits.RC2 = 0;
-"58
+[; ;ntc_test.c: 88: TRISCbits.RC2 = 0;
+"88
 [e = . . _TRISCbits 1 2 -> -> 0 `i `uc ]
-[; ;ntc_test.c: 59: configure_adc();
-"59
+[; ;ntc_test.c: 89: configure_adc();
+"89
 [e ( _configure_adc ..  ]
-[; ;ntc_test.c: 60: configure_pwm();
-"60
+[; ;ntc_test.c: 90: configure_pwm();
+"90
 [e ( _configure_pwm ..  ]
-[; ;ntc_test.c: 61: while(1)
-"61
-[e :U 948 ]
-[; ;ntc_test.c: 62: {
-"62
-{
-[; ;ntc_test.c: 64: temp = temperature_get(0);
-"64
-[e = _temp ( _temperature_get (1 -> 0 `i ]
-[; ;ntc_test.c: 65: if(temp >= 20 && temp <= 22)
-"65
-[e $ ! && >= _temp -> -> 20 `i `f <= _temp -> -> 22 `i `f 950  ]
-[; ;ntc_test.c: 66: CCPR1L = 0;
-"66
-[e = _CCPR1L -> -> 0 `i `uc ]
-[e $U 951  ]
-"67
-[e :U 950 ]
-[; ;ntc_test.c: 67: else if(temp >= 22 && temp <= 24)
-[e $ ! && >= _temp -> -> 22 `i `f <= _temp -> -> 24 `i `f 952  ]
-[; ;ntc_test.c: 68: CCPR1L = 25;
-"68
-[e = _CCPR1L -> -> 25 `i `uc ]
-[e $U 953  ]
-"69
-[e :U 952 ]
-[; ;ntc_test.c: 69: else if(temp >= 24 && temp <= 26)
-[e $ ! && >= _temp -> -> 24 `i `f <= _temp -> -> 26 `i `f 954  ]
-[; ;ntc_test.c: 70: CCPR1L = 50;
-"70
-[e = _CCPR1L -> -> 50 `i `uc ]
-[e $U 955  ]
-"71
-[e :U 954 ]
-[; ;ntc_test.c: 71: else if(temp >= 26 && temp <= 28)
-[e $ ! && >= _temp -> -> 26 `i `f <= _temp -> -> 28 `i `f 956  ]
-[; ;ntc_test.c: 72: CCPR1L = 100;
-"72
-[e = _CCPR1L -> -> 100 `i `uc ]
-[e $U 957  ]
-"73
-[e :U 956 ]
-[; ;ntc_test.c: 73: else if(temp >= 28 && temp <= 30)
-[e $ ! && >= _temp -> -> 28 `i `f <= _temp -> -> 30 `i `f 958  ]
-[; ;ntc_test.c: 74: CCPR1L = 150;
-"74
-[e = _CCPR1L -> -> 150 `i `uc ]
-[e $U 959  ]
-"75
-[e :U 958 ]
-[; ;ntc_test.c: 75: else if(temp >= 30 && temp <= 32)
-[e $ ! && >= _temp -> -> 30 `i `f <= _temp -> -> 32 `i `f 960  ]
-[; ;ntc_test.c: 76: CCPR1L = 200;
-"76
-[e = _CCPR1L -> -> 200 `i `uc ]
-[e $U 961  ]
-"77
-[e :U 960 ]
-[; ;ntc_test.c: 77: else if(temp >= 32 && temp <= 34)
-[e $ ! && >= _temp -> -> 32 `i `f <= _temp -> -> 34 `i `f 962  ]
-[; ;ntc_test.c: 78: CCPR1L = 225;
-"78
-[e = _CCPR1L -> -> 225 `i `uc ]
-[e $U 963  ]
-"79
-[e :U 962 ]
-[; ;ntc_test.c: 79: else
-[; ;ntc_test.c: 80: CCPR1L = 249;
-"80
-[e = _CCPR1L -> -> 249 `i `uc ]
-[e :U 963 ]
-[e :U 961 ]
-[e :U 959 ]
-[e :U 957 ]
-[e :U 955 ]
+[; ;ntc_test.c: 91: while(1)
+"91
 [e :U 953 ]
-[e :U 951 ]
-"81
+[; ;ntc_test.c: 92: {
+"92
+{
+[; ;ntc_test.c: 94: temp = get_temperature(0);
+"94
+[e = _temp ( _get_temperature (1 -> 0 `i ]
+[; ;ntc_test.c: 95: set_fan_speed(temp);
+"95
+[e ( _set_fan_speed (1 _temp ]
+"96
 }
-[e :U 947 ]
-"61
-[e $U 948  ]
-[e :U 949 ]
-[; ;ntc_test.c: 81: }
-[; ;ntc_test.c: 82: }
-"82
-[e :UE 946 ]
+[e :U 952 ]
+"91
+[e $U 953  ]
+[e :U 954 ]
+[; ;ntc_test.c: 96: }
+[; ;ntc_test.c: 97: }
+"97
+[e :UE 951 ]
 }

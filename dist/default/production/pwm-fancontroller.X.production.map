@@ -5,7 +5,7 @@ Linker command line:
 --edf=/opt/microchip/xc8/v1.31/dat/en_msgs.txt -cs \
   -h+dist/default/production/pwm-fancontroller.X.production.sym \
   --cmf=dist/default/production/pwm-fancontroller.X.production.cmf -z \
-  -Q18F45K50 -o/tmp/cgtvb3j9z \
+  -Q18F45K50 -o/tmp/cgt0Adi3O \
   -Mdist/default/production/pwm-fancontroller.X.production.map -E1 -ver=XC8 \
   -ASTACK=078h-07ffh -pstack=STACK -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
   -ASMALLCONST=0800h-08FFhx120 -AMEDIUMCONST=0800h-07FFFh -ACOMRAM=01h-05Fh \
@@ -21,7 +21,7 @@ Linker command line:
   -prdata=COMRAM,nvrram=COMRAM,nvbit=COMRAM,rbss=COMRAM,rbit=COMRAM \
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
-  -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE /tmp/cgtmFA837.obj \
+  -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE /tmp/cgtMCoL6B.obj \
   dist/default/production/pwm-fancontroller.X.production.obj 
 
 Object code version is 3.11
@@ -34,68 +34,72 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/cgtmFA837.obj
+/tmp/cgtMCoL6B.obj
                 end_init                              0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
                 config                           300000   300000        E   300000       0
 dist/default/production/pwm-fancontroller.X.production.obj
-                smallconst                          800      800       20      400       0
-                text16                             1358     1358       90      410       0
-                text15                             14F8     14F8       20      410       0
-                text14                             1518     1518       12      410       0
-                text13                             121C     121C       A8      410       0
-                text12                             1064     1064       E6      410       0
-                text11                             14D2     14D2       26      410       0
-                text10                             14A6     14A6       2C      410       0
-                text9                              1476     1476       30      410       0
-                text8                              13E8     13E8       54      410       0
-                text7                               C86      C86      1B8      410       0
-                text6                               F6C      F6C       F8      410       0
-                text5                              143C     143C       3A      410       0
-                text4                              114A     114A       D2      410       0
-                text3                              12C4     12C4       94      410       0
-                text2                               E3E      E3E      12E      410       0
-                text1                               820      820      256      410       0
-                text0                               A76      A76      210      410       0
-                cstackCOMRAM                          1        1       51        1       1
+                smallconst                          800      800       2A      400       0
+                text18                             1532     1532       20      415       0
+                text17                             1552     1552       12      415       0
+                text16                             1216     1216       A8      415       0
+                text15                             105E     105E       E6      415       0
+                text14                             150C     150C       26      415       0
+                text13                             14E0     14E0       2C      415       0
+                text12                             14B0     14B0       30      415       0
+                text11                             13E2     13E2       54      415       0
+                text10                              A80      A80      1B8      415       0
+                text9                               E70      E70       F8      415       0
+                text8                              1476     1476       3A      415       0
+                text7                              1144     1144       D2      415       0
+                text6                              12BE     12BE       94      415       0
+                text5                               C38      C38      12E      415       0
+                text4                               82A      82A      256      415       0
+                text3                              1352     1352       90      415       0
+                text2                               F68      F68       F6      415       0
+                text1                               D66      D66      10A      415       0
+                text0                              1436     1436       40      415       0
+                cstackCOMRAM                          1        1       59        1       1
                 cstackBANK0                          60       60       18       60       1
-                bssCOMRAM                            52       52        2        1       1
-                cinit                              152A     152A        E      410       0
+                bssCOMRAM                            5A       5A        2        1       1
+                cinit                              1564     1564        E      415       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
 
         CLASS   CODE           
                 end_init                              0        0        4         0
-                text16                             1358     1358       90         0
-                text15                             14F8     14F8       20         0
-                text14                             1518     1518       12         0
-                text13                             121C     121C       A8         0
-                text12                             1064     1064       E6         0
-                text11                             14D2     14D2       26         0
-                text10                             14A6     14A6       2C         0
-                text9                              1476     1476       30         0
-                text8                              13E8     13E8       54         0
-                text7                               C86      C86      1B8         0
-                text6                               F6C      F6C       F8         0
-                text5                              143C     143C       3A         0
-                text4                              114A     114A       D2         0
-                text3                              12C4     12C4       94         0
-                text2                               E3E      E3E      12E         0
-                text1                               820      820      256         0
-                text0                               A76      A76      210         0
-                cinit                              152A     152A        E         0
+                text18                             1532     1532       20         0
+                text17                             1552     1552       12         0
+                text16                             1216     1216       A8         0
+                text15                             105E     105E       E6         0
+                text14                             150C     150C       26         0
+                text13                             14E0     14E0       2C         0
+                text12                             14B0     14B0       30         0
+                text11                             13E2     13E2       54         0
+                text10                              A80      A80      1B8         0
+                text9                               E70      E70       F8         0
+                text8                              1476     1476       3A         0
+                text7                              1144     1144       D2         0
+                text6                              12BE     12BE       94         0
+                text5                               C38      C38      12E         0
+                text4                               82A      82A      256         0
+                text3                              1352     1352       90         0
+                text2                               F68      F68       F6         0
+                text1                               D66      D66      10A         0
+                text0                              1436     1436       40         0
+                cinit                              1564     1564        E         0
 
         CLASS   CONST          
 
         CLASS   SMALLCONST     
-                smallconst                          800      800       20         0
+                smallconst                          800      800       2A         0
 
         CLASS   MEDIUMCONST    
 
         CLASS   COMRAM         
-                cstackCOMRAM                          1        1       51         1
-                bssCOMRAM                            52       52        2         1
+                cstackCOMRAM                          1        1       59         1
+                bssCOMRAM                            5A       5A        2         1
 
         CLASS   ABS1           
 
@@ -137,10 +141,10 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
-                cstackCOMRAM                   000001  000053  000054         1       1  COMRAM  
+                cstackCOMRAM                   000001  00005B  00005C         1       1  COMRAM  
                 cstackBANK0                    000060  000018  000078        60       1  BANK0   
-                smallconst                     000800  000020  000820       400       0  SMALLCON
-                text1                          000820  000D18  001538       410       0  CODE    
+                smallconst                     000800  00002A  00082A       400       0  SMALLCON
+                text4                          00082A  000D48  001572       415       0  CODE    
                 idloc                          200000  000008  200008    200000       0  IDLOC   
                 config                         300000  00000E  30000E    300000       0  CONFIG  
 
@@ -156,18 +160,18 @@ UNUSED ADDRESS RANGES
         BANK5            000500-0005FF              100
         BANK6            000600-0006FF              100
         BANK7            000700-0007FF              100
-        BIGRAM           000054-00005F                C
+        BIGRAM           00005C-00005F                4
                          000078-0007FF              788
         CODE             000004-0007FF              7FC
-                         001538-007FFF             6AC8
-        COMRAM           000054-00005F                C
+                         001572-007FFF             6A8E
+        COMRAM           00005C-00005F                4
         CONST            000004-0007FF              7FC
-                         001538-007FFF             6AC8
+                         001572-007FFF             6A8E
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      001538-007FFF             6AC8
+        MEDIUMCONST      001572-007FFF             6A8E
         RAM              000078-0007FF              100
         SFR              000F53-000FFF                D
-        SMALLCONST       001538-007FFF              100
+        SMALLCONST       001572-007FFF              100
         STACK            000078-0007FF              788
 
                                   Symbol Table
@@ -178,13 +182,14 @@ UNUSED ADDRESS RANGES
 ?___ftmul                 cstackCOMRAM 00002C
 ?___ftneg                 cstackCOMRAM 00000E
 ?___ftpack                cstackCOMRAM 000001
+?___fttol                 cstackCOMRAM 00003B
 ?___lwtoft                cstackCOMRAM 000009
 ?___wmul                  cstackCOMRAM 000001
 ?_adc_convert             cstackCOMRAM 000001
 ?_eval_poly               cstackCOMRAM 00003B
 ?_frexp                   cstackCOMRAM 000001
+?_get_temperature         cstackCOMRAM 00004C
 ?_log                     cstackCOMRAM 000047
-?_temperature_get         cstackCOMRAM 00004C
 _ADCON0bits               (abs)        000FC2
 _ADCON1bits               (abs)        000FC1
 _ADCON2bits               (abs)        000FC0
@@ -194,6 +199,10 @@ _ADRESL                   (abs)        000FC3
 _ANSELAbits               (abs)        000F5B
 _CCP1CON                  (abs)        000FBD
 _CCPR1L                   (abs)        000FBE
+_MAX_DUTY_CYCLE           smallconst   00080A
+_MAX_TEMP                 smallconst   000804
+_MIN_DUTY_CYCLE           smallconst   00080C
+_MIN_TEMP                 smallconst   000807
 _PR2                      (abs)        000FBB
 _T2CON                    (abs)        000FBA
 _TRISAbits                (abs)        000F92
@@ -256,7 +265,7 @@ __Hrdata                  rdata        000000
 __Hreset_vec              reset_vec    000000
 __Hrparam                 rparam       000000
 __Hsfr                    sfr          000000
-__Hsmallconst             smallconst   000820
+__Hsmallconst             smallconst   00082A
 __Hstack                  stack        000000
 __Hstruct                 struct       000000
 __Htemp                   temp         000000
@@ -270,6 +279,8 @@ __Htext13                 text13       000000
 __Htext14                 text14       000000
 __Htext15                 text15       000000
 __Htext16                 text16       000000
+__Htext17                 text17       000000
+__Htext18                 text18       000000
 __Htext2                  text2        000000
 __Htext3                  text3        000000
 __Htext4                  text4        000000
@@ -345,6 +356,8 @@ __Ltext13                 text13       000000
 __Ltext14                 text14       000000
 __Ltext15                 text15       000000
 __Ltext16                 text16       000000
+__Ltext17                 text17       000000
+__Ltext18                 text18       000000
 __Ltext2                  text2        000000
 __Ltext3                  text3        000000
 __Ltext4                  text4        000000
@@ -356,93 +369,106 @@ __Ltext9                  text9        000000
 __S0                      (abs)        30000E
 __S1                      (abs)        000078
 __S2                      (abs)        000000
-___awtoft                 text8        0013E8
+___awtoft                 text11       0013E2
 ___awtoft@c               cstackCOMRAM 000009
 ___awtoft@sign            cstackCOMRAM 00000D
-___ftadd                  text7        000C86
+___ftadd                  text10       000A80
 ___ftadd@exp1             cstackCOMRAM 00001C
 ___ftadd@exp2             cstackCOMRAM 00001B
 ___ftadd@f1               cstackCOMRAM 000011
 ___ftadd@f2               cstackCOMRAM 000014
 ___ftadd@sign             cstackCOMRAM 00001A
-___ftdiv                  text12       001064
+___ftdiv                  text15       00105E
 ___ftdiv@cntr             cstackCOMRAM 000026
 ___ftdiv@exp              cstackCOMRAM 00002A
 ___ftdiv@f1               cstackCOMRAM 00001D
 ___ftdiv@f2               cstackCOMRAM 000020
 ___ftdiv@f3               cstackCOMRAM 000027
 ___ftdiv@sign             cstackCOMRAM 00002B
-___ftge                   text16       001358
+___ftge                   text3        001352
 ___ftge@ff1               cstackCOMRAM 000001
 ___ftge@ff2               cstackCOMRAM 000004
-___ftmul                  text6        000F6C
+___ftmul                  text9        000E70
 ___ftmul@cntr             cstackCOMRAM 000039
 ___ftmul@exp              cstackCOMRAM 000035
 ___ftmul@f1               cstackCOMRAM 00002C
 ___ftmul@f2               cstackCOMRAM 00002F
 ___ftmul@f3_as_product    cstackCOMRAM 000036
 ___ftmul@sign             cstackCOMRAM 00003A
-___ftneg                  text11       0014D2
+___ftneg                  text14       00150C
 ___ftneg@f1               cstackCOMRAM 00000E
-___ftpack                 text13       00121C
+___ftpack                 text16       001216
 ___ftpack@arg             cstackCOMRAM 000001
 ___ftpack@exp             cstackCOMRAM 000004
 ___ftpack@sign            cstackCOMRAM 000005
+___fttol                  text2        000F68
+___fttol@exp1             cstackCOMRAM 000049
+___fttol@f1               cstackCOMRAM 00003B
+___fttol@lval             cstackCOMRAM 000045
+___fttol@sign1            cstackCOMRAM 000044
 ___inthi_sp               stack        000000
 ___intlo_sp               stack        000000
-___lwtoft                 text10       0014A6
+___lwtoft                 text13       0014E0
 ___lwtoft@c               cstackCOMRAM 000009
 ___sp                     stack        000000
-___wmul                   text5        00143C
+___wmul                   text8        001476
 ___wmul@multiplicand      cstackCOMRAM 000003
 ___wmul@multiplier        cstackCOMRAM 000001
 ___wmul@product           cstackCOMRAM 000005
 __accesstop               (abs)        000060
 __activetblptr            (abs)        000002
 __end_of_ADC_RESOLUTION   smallconst   000804
-__end_of___awtoft         text8        00143C
-__end_of___ftadd          text7        000E3E
-__end_of___ftdiv          text12       00114A
-__end_of___ftge           text16       0013E8
-__end_of___ftmul          text6        001064
-__end_of___ftneg          text11       0014F8
-__end_of___ftpack         text13       0012C4
-__end_of___lwtoft         text10       0014D2
-__end_of___wmul           text5        001476
-__end_of__initialization  cinit        00152E
-__end_of_adc_convert      text9        0014A6
-__end_of_configure_adc    text15       001518
-__end_of_configure_pwm    text14       00152A
-__end_of_eval_poly        text4        00121C
-__end_of_frexp            text3        001358
-__end_of_log              text2        000F6C
-__end_of_main             text0        000C86
-__end_of_temperature_get  text1        000A76
-__end_oflog@coeff         smallconst   00081F
-__initialization          cinit        00152A
+__end_of_MAX_DUTY_CYCLE   smallconst   00080C
+__end_of_MAX_TEMP         smallconst   000807
+__end_of_MIN_DUTY_CYCLE   smallconst   00080E
+__end_of_MIN_TEMP         smallconst   00080A
+__end_of___awtoft         text11       001436
+__end_of___ftadd          text10       000C38
+__end_of___ftdiv          text15       001144
+__end_of___ftge           text3        0013E2
+__end_of___ftmul          text9        000F68
+__end_of___ftneg          text14       001532
+__end_of___ftpack         text16       0012BE
+__end_of___fttol          text2        00105E
+__end_of___lwtoft         text13       00150C
+__end_of___wmul           text8        0014B0
+__end_of__initialization  cinit        001568
+__end_of_adc_convert      text12       0014E0
+__end_of_configure_adc    text18       001552
+__end_of_configure_pwm    text17       001564
+__end_of_eval_poly        text7        001216
+__end_of_frexp            text6        001352
+__end_of_get_temperature  text4        000A80
+__end_of_log              text5        000D66
+__end_of_main             text0        001476
+__end_of_set_fan_speed    text1        000E70
+__end_oflog@coeff         smallconst   000829
+__initialization          cinit        001564
 __mediumconst             mediumconst  000000
-__pbssCOMRAM              bssCOMRAM    000052
-__pcinit                  cinit        00152A
+__pbssCOMRAM              bssCOMRAM    00005A
+__pcinit                  cinit        001564
 __pcstackBANK0            cstackBANK0  000060
 __pcstackCOMRAM           cstackCOMRAM 000001
 __psmallconst             smallconst   000800
-__ptext0                  text0        000A76
-__ptext1                  text1        000820
-__ptext10                 text10       0014A6
-__ptext11                 text11       0014D2
-__ptext12                 text12       001064
-__ptext13                 text13       00121C
-__ptext14                 text14       001518
-__ptext15                 text15       0014F8
-__ptext16                 text16       001358
-__ptext2                  text2        000E3E
-__ptext3                  text3        0012C4
-__ptext4                  text4        00114A
-__ptext5                  text5        00143C
-__ptext6                  text6        000F6C
-__ptext7                  text7        000C86
-__ptext8                  text8        0013E8
-__ptext9                  text9        001476
+__ptext0                  text0        001436
+__ptext1                  text1        000D66
+__ptext10                 text10       000A80
+__ptext11                 text11       0013E2
+__ptext12                 text12       0014B0
+__ptext13                 text13       0014E0
+__ptext14                 text14       00150C
+__ptext15                 text15       00105E
+__ptext16                 text16       001216
+__ptext17                 text17       001552
+__ptext18                 text18       001532
+__ptext2                  text2        000F68
+__ptext3                  text3        001352
+__ptext4                  text4        00082A
+__ptext5                  text5        000C38
+__ptext6                  text6        0012BE
+__ptext7                  text7        001144
+__ptext8                  text8        001476
+__ptext9                  text9        000E70
 __ramtop                  ramtop       000800
 __size_of___awtoft        (abs)        000000
 __size_of___ftadd         (abs)        000000
@@ -451,6 +477,7 @@ __size_of___ftge          (abs)        000000
 __size_of___ftmul         (abs)        000000
 __size_of___ftneg         (abs)        000000
 __size_of___ftpack        (abs)        000000
+__size_of___fttol         (abs)        000000
 __size_of___lwtoft        (abs)        000000
 __size_of___wmul          (abs)        000000
 __size_of_adc_convert     (abs)        000000
@@ -458,60 +485,65 @@ __size_of_configure_adc   (abs)        000000
 __size_of_configure_pwm   (abs)        000000
 __size_of_eval_poly       (abs)        000000
 __size_of_frexp           (abs)        000000
+__size_of_get_temperature (abs)        000000
 __size_of_log             (abs)        000000
 __size_of_main            (abs)        000000
-__size_of_temperature_get (abs)        000000
+__size_of_set_fan_speed   (abs)        000000
 __smallconst              smallconst   000800
-_adc_convert              text9        001476
-_configure_adc            text15       0014F8
-_configure_pwm            text14       001518
-_errno                    bssCOMRAM    000052
-_eval_poly                text4        00114A
-_frexp                    text3        0012C4
-_log                      text2        000E3E
-_main                     text0        000A76
-_temperature_get          text1        000820
-_temperature_get$889      cstackBANK0  000066
-_temperature_get$890      cstackBANK0  000069
+_adc_convert              text12       0014B0
+_configure_adc            text18       001532
+_configure_pwm            text17       001552
+_errno                    bssCOMRAM    00005A
+_eval_poly                text7        001144
+_frexp                    text6        0012BE
+_get_temperature          text4        00082A
+_get_temperature$892      cstackBANK0  000066
+_get_temperature$893      cstackBANK0  000069
+_log                      text5        000C38
+_main                     text0        001436
+_set_fan_speed            text1        000D66
 adc_convert@channel       cstackCOMRAM 000001
-end_of_initialization     cinit        00152E
+end_of_initialization     cinit        001568
 eval_poly@d               cstackCOMRAM 00003E
 eval_poly@n               cstackCOMRAM 000040
 eval_poly@res             cstackCOMRAM 000044
 eval_poly@x               cstackCOMRAM 00003B
 frexp@eptr                cstackCOMRAM 000004
 frexp@value               cstackCOMRAM 000001
+get_temperature@Bth       cstackBANK0  000073
+get_temperature@R1        cstackBANK0  00006C
+get_temperature@R2        cstackBANK0  000071
+get_temperature@Rth       cstackBANK0  000063
+get_temperature@Tn        cstackBANK0  00006E
+get_temperature@Vout      cstackBANK0  000060
+get_temperature@sensor    cstackCOMRAM 00004C
+get_temperature@temp      cstackBANK0  000075
 intlevel0                 text         000000
 intlevel1                 text         000000
 intlevel2                 text         000000
 intlevel3                 text         000000
-log@coeff                 smallconst   000804
+log@coeff                 smallconst   00080E
 log@exponent              cstackCOMRAM 00004A
 log@x                     cstackCOMRAM 000047
-main@temp                 cstackCOMRAM 00004F
+main@temp                 cstackCOMRAM 000057
+set_fan_speed@tTemp       cstackCOMRAM 000051
+set_fan_speed@tTemp_291   cstackCOMRAM 000054
+set_fan_speed@temp        cstackCOMRAM 00004A
 stackhi                   (abs)        0007FF
 stacklo                   (abs)        000078
 start                     init         000000
-start_initialization      cinit        00152A
-temperature_get@Bth       cstackBANK0  000073
-temperature_get@R1        cstackBANK0  00006C
-temperature_get@R2        cstackBANK0  000071
-temperature_get@Rth       cstackBANK0  000063
-temperature_get@Tn        cstackBANK0  00006E
-temperature_get@Vout      cstackBANK0  000060
-temperature_get@sensor    cstackCOMRAM 00004C
-temperature_get@temp      cstackBANK0  000075
+start_initialization      cinit        001564
 
 
 FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 53 in file "ntc_test.c"
+		line 83 in file "ntc_test.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  temp            3   78[COMRAM] float 
+  temp            3   86[COMRAM] float 
  Return value:  Size  Location     Type
 		None               void
  Registers used:
@@ -528,16 +560,112 @@ FUNCTION INFORMATION:
 Total ram usage:        3 bytes
  Hardware stack levels required when called:    5
  This function calls:
-		___ftge
 		_configure_adc
 		_configure_pwm
-		_temperature_get
+		_get_temperature
+		_set_fan_speed
  This function is called by:
 		Startup code after reset
  This function uses a non-reentrant model
 
 
- *************** function _temperature_get *****************
+ *************** function _set_fan_speed *****************
+ Defined at:
+		line 62 in file "ntc_test.c"
+ Parameters:    Size  Location     Type
+  temp            3   73[COMRAM] float 
+ Auto vars:     Size  Location     Type
+  tTemp           3   83[COMRAM] float 
+  tTemp           3   80[COMRAM] float 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, prodl, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         3       0       0       0       0       0       0       0       0
+      Locals:         6       0       0       0       0       0       0       0       0
+      Temps:          4       0       0       0       0       0       0       0       0
+      Totals:        13       0       0       0       0       0       0       0       0
+Total ram usage:       13 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		___awtoft
+		___ftdiv
+		___ftge
+		___ftmul
+		___fttol
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function ___fttol *****************
+ Defined at:
+		line 44 in file "/opt/microchip/xc8/v1.31/sources/common/fttol.c"
+ Parameters:    Size  Location     Type
+  f1              3   58[COMRAM] float 
+ Auto vars:     Size  Location     Type
+  lval            4   68[COMRAM] unsigned long 
+  exp1            1   72[COMRAM] unsigned char 
+  sign1           1   67[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  4   58[COMRAM] long 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         4       0       0       0       0       0       0       0       0
+      Locals:         6       0       0       0       0       0       0       0       0
+      Temps:          5       0       0       0       0       0       0       0       0
+      Totals:        15       0       0       0       0       0       0       0       0
+Total ram usage:       15 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_set_fan_speed
+ This function uses a non-reentrant model
+
+
+ *************** function ___ftge *****************
+ Defined at:
+		line 4 in file "/opt/microchip/xc8/v1.31/sources/common/ftge.c"
+ Parameters:    Size  Location     Type
+  ff1             3    0[COMRAM] float 
+  ff2             3    3[COMRAM] float 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         6       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0
+      Temps:          3       0       0       0       0       0       0       0       0
+      Totals:         9       0       0       0       0       0       0       0       0
+Total ram usage:        9 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_set_fan_speed
+ This function uses a non-reentrant model
+
+
+ *************** function _get_temperature *****************
  Defined at:
 		line 25 in file "ntc_temperature.h"
  Parameters:    Size  Location     Type
@@ -610,7 +738,7 @@ Total ram usage:        5 bytes
 		_eval_poly
 		_frexp
  This function is called by:
-		_temperature_get
+		_get_temperature
  This function uses a non-reentrant model
 
 
@@ -706,7 +834,7 @@ Total ram usage:        6 bytes
  This function calls:
 		Nothing
  This function is called by:
-		_temperature_get
+		_get_temperature
 		_eval_poly
  This function uses a non-reentrant model
 
@@ -741,7 +869,8 @@ Total ram usage:       15 bytes
  This function calls:
 		___ftpack
  This function is called by:
-		_temperature_get
+		_get_temperature
+		_set_fan_speed
 		_log
 		_eval_poly
  This function uses a non-reentrant model
@@ -776,7 +905,7 @@ Total ram usage:       12 bytes
  This function calls:
 		___ftpack
  This function is called by:
-		_temperature_get
+		_get_temperature
 		_log
 		_eval_poly
  This function uses a non-reentrant model
@@ -808,6 +937,7 @@ Total ram usage:        5 bytes
  This function calls:
 		___ftpack
  This function is called by:
+		_set_fan_speed
 		_log
  This function uses a non-reentrant model
 
@@ -837,7 +967,7 @@ Total ram usage:        4 bytes
  This function calls:
 		Nothing
  This function is called by:
-		_temperature_get
+		_get_temperature
  This function uses a non-reentrant model
 
 
@@ -867,7 +997,7 @@ Total ram usage:        5 bytes
  This function calls:
 		___ftpack
  This function is called by:
-		_temperature_get
+		_get_temperature
  This function uses a non-reentrant model
 
 
@@ -896,7 +1026,7 @@ Total ram usage:        3 bytes
  This function calls:
 		Nothing
  This function is called by:
-		_temperature_get
+		_get_temperature
  This function uses a non-reentrant model
 
 
@@ -930,7 +1060,8 @@ Total ram usage:       15 bytes
  This function calls:
 		___ftpack
  This function is called by:
-		_temperature_get
+		_get_temperature
+		_set_fan_speed
  This function uses a non-reentrant model
 
 
@@ -971,7 +1102,7 @@ Total ram usage:        8 bytes
 
  *************** function _configure_pwm *****************
  Defined at:
-		line 43 in file "ntc_test.c"
+		line 52 in file "ntc_test.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1000,7 +1131,7 @@ Total ram usage:        0 bytes
 
  *************** function _configure_adc *****************
  Defined at:
-		line 25 in file "ntc_test.c"
+		line 34 in file "ntc_test.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1027,117 +1158,97 @@ Total ram usage:        0 bytes
  This function uses a non-reentrant model
 
 
- *************** function ___ftge *****************
- Defined at:
-		line 4 in file "/opt/microchip/xc8/v1.31/sources/common/ftge.c"
- Parameters:    Size  Location     Type
-  ff1             3    0[COMRAM] float 
-  ff2             3    3[COMRAM] float 
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-		None               void
- Registers used:
-		wreg, status,2, status,0
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-      Params:         6       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0
-      Temps:          3       0       0       0       0       0       0       0       0
-      Totals:         9       0       0       0       0       0       0       0       0
-Total ram usage:        9 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
 
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 ntc_temperature.h
-		_adc_convert   		CODE           	1476	0000	48
-		_temperature_ge		CODE           	0820	0000	598
+		_adc_convert   		CODE           	14B0	0000	48
+		_get_temperatur		CODE           	082A	0000	598
 
 ntc_temperature.h estimated size: 646
 
 /opt/microchip/xc8/v1.31/sources/common/log.c
-		_log           		CODE           	0E3E	0000	302
+		_log           		CODE           	0C38	0000	302
 
 /opt/microchip/xc8/v1.31/sources/common/log.c estimated size: 302
 
 /opt/microchip/xc8/v1.31/sources/common/awtoft.c
-		___awtoft      		CODE           	13E8	0000	84
+		___awtoft      		CODE           	13E2	0000	84
 
 /opt/microchip/xc8/v1.31/sources/common/awtoft.c estimated size: 84
 
 /opt/microchip/xc8/v1.31/sources/common/ftadd.c
-		___ftadd       		CODE           	0C86	0000	440
+		___ftadd       		CODE           	0A80	0000	440
 
 /opt/microchip/xc8/v1.31/sources/common/ftadd.c estimated size: 440
 
 shared
+		_MIN_TEMP      		SMALLCONST     	0807	0000	3
+		_MAX_DUTY_CYCLE		SMALLCONST     	080A	0000	2
+		_MAX_TEMP      		SMALLCONST     	0804	0000	3
 		_ADC_RESOLUTION		SMALLCONST     	0801	0000	3
-		__initializatio		CODE           	152A	0000	4
-		log@coeff      		SMALLCONST     	0804	0000	27
+		__initializatio		CODE           	1564	0000	4
+		log@coeff      		SMALLCONST     	080E	0000	27
+		_MIN_DUTY_CYCLE		SMALLCONST     	080C	0000	2
 
-shared estimated size: 34
+shared estimated size: 44
 
 /opt/microchip/xc8/v1.31/sources/common/float.c
-		___ftpack      		CODE           	121C	0000	168
+		___ftpack      		CODE           	1216	0000	168
 
 /opt/microchip/xc8/v1.31/sources/common/float.c estimated size: 168
 
 /opt/microchip/xc8/v1.31/sources/common/lwtoft.c
-		___lwtoft      		CODE           	14A6	0000	44
+		___lwtoft      		CODE           	14E0	0000	44
 
 /opt/microchip/xc8/v1.31/sources/common/lwtoft.c estimated size: 44
 
 /opt/microchip/xc8/v1.31/sources/common/frexp.c
-		_frexp         		CODE           	12C4	0000	148
+		_frexp         		CODE           	12BE	0000	148
 
 /opt/microchip/xc8/v1.31/sources/common/frexp.c estimated size: 148
 
 /opt/microchip/xc8/v1.31/sources/common/evalpoly.c
-		_eval_poly     		CODE           	114A	0000	210
+		_eval_poly     		CODE           	1144	0000	210
 
 /opt/microchip/xc8/v1.31/sources/common/evalpoly.c estimated size: 210
 
 ntc_test.c
-		_configure_adc 		CODE           	14F8	0000	32
-		_configure_pwm 		CODE           	1518	0000	18
-		_main          		CODE           	0A76	0000	528
+		_configure_adc 		CODE           	1532	0000	32
+		_configure_pwm 		CODE           	1552	0000	18
+		_main          		CODE           	1436	0000	64
+		_set_fan_speed 		CODE           	0D66	0000	266
 
-ntc_test.c estimated size: 578
+ntc_test.c estimated size: 380
 
 /opt/microchip/xc8/v1.31/sources/common/ftdiv.c
-		___ftdiv       		CODE           	1064	0000	230
+		___ftdiv       		CODE           	105E	0000	230
 
 /opt/microchip/xc8/v1.31/sources/common/ftdiv.c estimated size: 230
 
 /opt/microchip/xc8/v1.31/sources/common/ftneg.c
-		___ftneg       		CODE           	14D2	0000	38
+		___ftneg       		CODE           	150C	0000	38
 
 /opt/microchip/xc8/v1.31/sources/common/ftneg.c estimated size: 38
 
 /opt/microchip/xc8/v1.31/sources/common/ftge.c
-		___ftge        		CODE           	1358	0000	144
+		___ftge        		CODE           	1352	0000	144
 
 /opt/microchip/xc8/v1.31/sources/common/ftge.c estimated size: 144
 
 /opt/microchip/xc8/v1.31/sources/common/wmul.c
-		___wmul        		CODE           	143C	0000	58
+		___wmul        		CODE           	1476	0000	58
 
 /opt/microchip/xc8/v1.31/sources/common/wmul.c estimated size: 58
 
 /opt/microchip/xc8/v1.31/sources/common/ftmul.c
-		___ftmul       		CODE           	0F6C	0000	248
+		___ftmul       		CODE           	0E70	0000	248
 
 /opt/microchip/xc8/v1.31/sources/common/ftmul.c estimated size: 248
+
+/opt/microchip/xc8/v1.31/sources/common/fttol.c
+		___fttol       		CODE           	0F68	0000	246
+
+/opt/microchip/xc8/v1.31/sources/common/fttol.c estimated size: 246
 

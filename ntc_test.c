@@ -16,10 +16,19 @@
 #pragma config MCLRE = ON
 #pragma config PBADEN = OFF
 
+// Set the lowest possible duty cycle that we can have.
+const unsigned int MIN_DUTY_CYCLE = 30;
+const unsigned int MAX_DUTY_CYCLE = 255;
+
+// Set the minimum temperature to 18C
+const float MIN_TEMP = 18.0;
+const float MAX_TEMP = 35.0;
+
 // Define our functions here (C requires function prototypes
 // like this...stick this in header next time
 void configure_adc(void);
 void configure_pwm(void);
+void set_fan_speed(float temp);
 
 // Configure and enable the ADC on the selected PORT
 void configure_adc(void)
@@ -50,6 +59,28 @@ void configure_pwm(void)
     CCPR1L = 25;
 }
 
+// Algorithm to linearly adjust the fanspeed based on temperature.
+void set_fan_speed(float temp)
+{
+    float tTemp = 0;
+    if(temp <= MIN_TEMP)
+    {
+        CCPR1L = MIN_DUTY_CYCLE;
+    }
+    else 
+    {
+        float tTemp = temp / MAX_TEMP;
+        if(tTemp >= 1)
+        {
+            CCPR1L = MAX_DUTY_CYCLE;
+        }
+        else
+        {
+            CCPR1L = (int)MAX_DUTY_CYCLE*tTemp;
+        }
+    }
+}
+
 void main(void)
 {
     float temp = 0;
@@ -61,22 +92,7 @@ void main(void)
     while(1)
     {
         // Get temperature on pin RA0
-        temp = temperature_get(0);
-        if(temp >= 20 && temp <= 22)
-            CCPR1L = 0;
-        else if(temp >= 22 && temp <= 24)
-            CCPR1L = 25;
-        else if(temp >= 24 && temp <= 26)
-            CCPR1L = 50;
-        else if(temp >= 26 && temp <= 28)
-            CCPR1L = 100;
-        else if(temp >= 28 && temp <= 30)
-            CCPR1L = 150;
-        else if(temp >= 30 && temp <= 32)
-            CCPR1L = 200;
-        else if(temp >= 32 && temp <= 34)
-            CCPR1L = 225;
-        else
-            CCPR1L = 249;
+        temp = get_temperature(0);
+        set_fan_speed(temp);
     }
 }

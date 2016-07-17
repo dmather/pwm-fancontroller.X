@@ -22,7 +22,7 @@ unsigned adc_convert(int channel)
 }
 
 // Get the approximate temperature using an NTC
-float temperature_get(int sensor)
+float get_temperature(int sensor)
 {
     float Vout;
     // R1 is a low temp-co resistor

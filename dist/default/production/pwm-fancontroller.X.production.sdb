@@ -138,12 +138,14 @@
 "12 /home/daniel/MPLABXProjects/pwm-fancontroller.X/ntc_temperature.h
 [v _adc_convert adc_convert `(ui  1 e 2 0 ]
 "25
-[v _temperature_get temperature_get `(f  1 e 3 0 ]
-"25 /home/daniel/MPLABXProjects/pwm-fancontroller.X/ntc_test.c
+[v _get_temperature get_temperature `(f  1 e 3 0 ]
+"34 /home/daniel/MPLABXProjects/pwm-fancontroller.X/ntc_test.c
 [v _configure_adc configure_adc `(v  1 e 0 0 ]
-"43
+"52
 [v _configure_pwm configure_pwm `(v  1 e 0 0 ]
-"53
+"62
+[v _set_fan_speed set_fan_speed `(v  1 e 0 0 ]
+"83
 [v _main main `(v  1 e 0 0 ]
 [s S119 . 1 `uc 1 ANSA0 1 0 :1:0 
 `uc 1 ANSA1 1 0 :1:1 
@@ -269,32 +271,70 @@
 [v _errno errno `i  1 e 2 0 ]
 "9 /home/daniel/MPLABXProjects/pwm-fancontroller.X/ntc_temperature.h
 [v _ADC_RESOLUTION ADC_RESOLUTION `Cf  1 e 3 0 ]
-"53 /home/daniel/MPLABXProjects/pwm-fancontroller.X/ntc_test.c
+"20 /home/daniel/MPLABXProjects/pwm-fancontroller.X/ntc_test.c
+[v _MIN_DUTY_CYCLE MIN_DUTY_CYCLE `Cui  1 e 2 0 ]
+"21
+[v _MAX_DUTY_CYCLE MAX_DUTY_CYCLE `Cui  1 e 2 0 ]
+"24
+[v _MIN_TEMP MIN_TEMP `Cf  1 e 3 0 ]
+"25
+[v _MAX_TEMP MAX_TEMP `Cf  1 e 3 0 ]
+"83
 [v _main main `(v  1 e 0 0 ]
 {
-"55
-[v main@temp temp `f  1 a 3 78 ]
-"82
+"85
+[v main@temp temp `f  1 a 3 86 ]
+"97
+} 0
+"62
+[v _set_fan_speed set_fan_speed `(v  1 e 0 0 ]
+{
+"70
+[v set_fan_speed@tTemp_291 tTemp `f  1 a 3 83 ]
+"64
+[v set_fan_speed@tTemp tTemp `f  1 a 3 80 ]
+"62
+[v set_fan_speed@temp temp `f  1 p 3 73 ]
+"81
+} 0
+"44 /opt/microchip/xc8/v1.31/sources/common/fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 68 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 72 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 67 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 58 ]
+"73
+} 0
+"4 /opt/microchip/xc8/v1.31/sources/common/ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 0 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 3 ]
+"13
 } 0
 "25 /home/daniel/MPLABXProjects/pwm-fancontroller.X/ntc_temperature.h
-[v _temperature_get temperature_get `(f  1 e 3 0 ]
+[v _get_temperature get_temperature `(f  1 e 3 0 ]
 {
 "35
-[v temperature_get@temp temp `f  1 a 3 21 ]
+[v get_temperature@temp temp `f  1 a 3 21 ]
 "33
-[v temperature_get@Tn Tn `f  1 a 3 14 ]
+[v get_temperature@Tn Tn `f  1 a 3 14 ]
 "32
-[v temperature_get@Rth Rth `f  1 a 3 3 ]
+[v get_temperature@Rth Rth `f  1 a 3 3 ]
 "27
-[v temperature_get@Vout Vout `f  1 a 3 0 ]
+[v get_temperature@Vout Vout `f  1 a 3 0 ]
 "34
-[v temperature_get@Bth Bth `ui  1 a 2 19 ]
+[v get_temperature@Bth Bth `ui  1 a 2 19 ]
 "31
-[v temperature_get@R2 R2 `ui  1 a 2 17 ]
+[v get_temperature@R2 R2 `ui  1 a 2 17 ]
 "29
-[v temperature_get@R1 R1 `ui  1 a 2 12 ]
+[v get_temperature@R1 R1 `ui  1 a 2 12 ]
 "25
-[v temperature_get@sensor sensor `i  1 p 2 75 ]
+[v get_temperature@sensor sensor `i  1 p 2 75 ]
 "47
 } 0
 "5 /opt/microchip/xc8/v1.31/sources/common/log.c
@@ -411,20 +451,13 @@
 [v ___ftpack@sign sign `uc  1 p 1 4 ]
 "86
 } 0
-"43 /home/daniel/MPLABXProjects/pwm-fancontroller.X/ntc_test.c
+"52 /home/daniel/MPLABXProjects/pwm-fancontroller.X/ntc_test.c
 [v _configure_pwm configure_pwm `(v  1 e 0 0 ]
 {
-"51
+"60
 } 0
-"25
+"34
 [v _configure_adc configure_adc `(v  1 e 0 0 ]
 {
-"41
-} 0
-"4 /opt/microchip/xc8/v1.31/sources/common/ftge.c
-[v ___ftge __ftge `(b  1 e 0 0 ]
-{
-[v ___ftge@ff1 ff1 `f  1 p 3 0 ]
-[v ___ftge@ff2 ff2 `f  1 p 3 3 ]
-"13
+"50
 } 0
