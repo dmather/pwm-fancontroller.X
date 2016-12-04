@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=pwm-fancontroller.X
+PROJECTNAME=TestSPI.X
 
 # Active Configuration
 DEFAULTCONF=default

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/daniel/MPLABXProjects/TestSPI.X/max7221.c</file>
+            <file>file:/home/daniel/MPLABXProjects/TestSPI.X/spi.c</file>
+            <file>file:/home/daniel/MPLABXProjects/TestSPI.X/config.h</file>
+            <file>file:/home/daniel/MPLABXProjects/TestSPI.X/max7221.h</file>
+            <file>file:/home/daniel/MPLABXProjects/TestSPI.X/spi.h</file>
+            <file>file:/home/daniel/MPLABXProjects/TestSPI.X/ntc_temperature.h</file>
+            <file>file:/home/daniel/MPLABXProjects/TestSPI.X/main.c</file>
+            <file>file:/home/daniel/MPLABXProjects/TestSPI.X/ntc_temperature.c</file>
+        </group>
+    </open-files>
+</project-private>
