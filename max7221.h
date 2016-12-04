@@ -16,11 +16,11 @@ void MAX_7221_INTENSITY(unsigned char value);
 void MAX_7221_SCAN_LIMIT(unsigned char limit);
 
 // Reg refers to the MAX7221 register
-void MAX_7221_WRITE(unsigned int reg, unsigned int value);
+void MAX_7221_WRITE(uint8_t reg, uint8_t value);
 
-void MAX_7221_WRITE_NUMBER(unsigned int value);
+void MAX_7221_WRITE_NUMBER(uint8_t value);
 
-void MAX_7221_WRITE_FLOAT(float value);
+void MAX_7221_WRITE_FLOAT(const float value, const unsigned int max_digits);
 
 void MAX_7221_INIT();
 

@@ -2,7 +2,7 @@
 #include "xc.h"
 
 // Default unsigned int is 16-bit
-unsigned adc_convert(int channel)
+unsigned adc_convert(unsigned int channel)
 {
     // Set channel to be 0 (RA0)
     ADCON0bits.CHS = channel;

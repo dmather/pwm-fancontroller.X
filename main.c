@@ -112,7 +112,7 @@ void set_fan_speed(float temp)
         }
         else
         {
-            int new_duty_cycle = (int)MAX_DUTY_CYCLE * tTemp;
+            unsigned int new_duty_cycle = (unsigned int)MAX_DUTY_CYCLE * tTemp;
             CCPR1L = new_duty_cycle;
         }
     }
@@ -140,7 +140,7 @@ void main(void)
         temp = get_temperature(0);
         set_fan_speed(temp);
         if(ticks % 125 == 0) {
-            MAX_7221_WRITE_FLOAT(temp);
+            MAX_7221_WRITE_FLOAT(temp, 3);
             ticks = 0;
         }
         ticks++;

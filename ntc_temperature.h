@@ -14,7 +14,7 @@
 const float ADC_RESOLUTION = 5/1024.0;
 
 // Default unsigned int is 16-bit
-unsigned adc_convert(int channel);
+unsigned adc_convert(unsigned int channel);
 
 // Get the approximate temperature using an NTC
 float get_temperature(int sensor);
